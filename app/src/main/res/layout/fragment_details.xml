@@ -1,0 +1,115 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.movieapp.DetailsFragment"
+    tools:showIn="@layout/activity_details">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:textSize="40sp"
+            android:id="@+id/movie_name"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:id="@+id/movie_poster"
+            android:paddingTop="5dp"
+            android:paddingLeft="1dp"
+            android:layout_below="@id/movie_name"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/movie_year"
+            android:paddingTop="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="5dp"
+            android:layout_alignTop="@id/movie_poster"
+            android:layout_toEndOf="@id/movie_poster" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="125 M"
+            android:id="@+id/Movie_time"
+            android:paddingTop="5dp"
+            android:layout_below="@id/movie_year"
+            android:layout_toEndOf="@id/movie_poster"
+            android:paddingLeft="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/movie_rate"
+            android:paddingTop="10dp"
+            android:layout_below="@id/Movie_time"
+            android:layout_toEndOf="@+id/movie_poster"
+            android:paddingLeft="5dp"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Movie_overview"
+            android:layout_below="@id/movie_poster"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000000"
+            android:id="@+id/line"
+            android:layout_below="@id/Movie_overview"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Trailers:"
+            android:textSize="25sp"
+            android:id="@+id/trailers_text"
+            android:layout_below="@id/line"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/Movie_trailers"
+            android:layout_below="@id/trailers_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make As Favorite"
+            android:id="@+id/favBtn"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/movie_rate"
+            android:layout_toEndOf="@id/movie_poster"
+            android:background="#0ca1f8" />
+    </RelativeLayout>
+
+
+</ScrollView>
